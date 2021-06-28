@@ -1,0 +1,70 @@
+/*allStyles*/
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    color: black;
+    width: 25%;
+    margin: 10% auto;
+}
+
+header {
+    background-color: #C79D93;
+}
+
+
+/*windowBar */
+
+.windowbar {
+    display: flex;
+}
+
+.windowbar .left {
+    flex-basis: 20%;
+}
+
+.windowbar .space {
+    flex-basis: 75%;
+}
+
+.windowbar .right {
+    flex-basis: 5%;
+}
+
+.close {
+    background-color: red;
+    border-radius: 100%;
+}
+
+.minimize {
+    background-color: yellow;
+    border-radius: 100%;
+}
+
+.maximize {
+    background-color: greenyellow;
+    border-radius: 100%;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: ". . . ." ". . . ." ". . . ." ". . . ." ". . . .";
+    background-color: #93C7B4;
+}
+
+button {
+    background-color: #D6FFF0;
+    border-radius: 50%;
+    width: 3rem;
+    margin: 0.5rem auto;
+    display: inline-block;
+}
+
+.area {
+    background-color: #C79D93;
+    min-height: 6rem;
+}

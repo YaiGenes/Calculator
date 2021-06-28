@@ -29,3 +29,14 @@
                 //concatenate it to the display
             }
         }
+
+        //DARK_MODE
+        function dlMode() {
+            var darkMode1 = document.querySelectorAll('.colors')
+            darkMode1.forEach(dark => {
+                dark.classList.toggle('darkMode1')
+                dark.classList.remove('area')
+            });
+            var darkMode2 = document.querySelector('.container')
+            darkMode2.classList.toggle('darkMode2')
+        }

@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background-color: #C79D93;
+    background-color: #D6FFF0;
 }
 
 
@@ -20,11 +20,11 @@ header {
 }
 
 .windowbar .left {
-    flex-basis: 20%;
+    flex-basis: 60%;
 }
 
 .windowbar .space {
-    flex-basis: 75%;
+    flex-basis: 35%;
 }
 
 .windowbar .right {
@@ -65,6 +65,11 @@ button {
 }
 
 .area {
-    background-color: #C79D93;
-    min-height: 6rem;
+    background-color: #D6FFF0;
+    height: 6rem;
+}
+
+.area input {
+    background-color: #D6FFF0;
+    border: none;
 }

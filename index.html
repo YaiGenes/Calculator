@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+
+<body>
+    <header>
+        <div class="windowbar">
+            <div class="left">
+                <button class="headerleft close"></button>
+                <button class="headerleft minimize"></button>
+                <button class="headerleft maximize"></button>
+            </div>
+            <div class="space"></div>
+            <div class="right">
+                <button class="mode" onclick="dlMode()"></button>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="area">
+        <input type="text" class="result">
+
+        <input type="text" class="operation">
+    </div>
+
+    <div class="container">
+        <button value="C">C</button>
+        <button value="+-">+-</button>
+        <button class="operator" value="%">%</button>
+        <button class="operator" value="/">/</button>
+        <button value="7">7</button>
+        <button value="8">8</button>
+        <button value="9">9</button>
+        <button class="operator" value="*">X</button>
+        <button value="4">4</button>
+        <button value="5">5</button>
+        <button value="6">6</button>
+        <button class="operator" value="-">-</button>
+        <button value="1">1</button>
+        <button value="2">2</button>
+        <button value="3">3</button>
+        <button class="operator" value="+">+</button>
+        <button value="0">0</button>
+        <button value=".">.</button>
+        <p></p>
+        <button class="operator" value="=">=</button>
+    </div>
+    <script>
+        const buttons = document.querySelectorAll('button');
+        //select buttons and stores in an array
+        const result = document.querySelector(".result");
+        //select the place to show the result of the operation
+
+        buttons.forEach(button => {
+            button.addEventListener("click", operate);
+        });
+        //add event listener to each button
+
+        function operate(event) {
+            //calculator function
+            const clickedButtonValue = event.target.value;
+            //store in the variable the current clicked button´s value
+            let final = document.querySelector('.operation')
+            if (clickedButtonValue === '=') {
+                //
+                if (result.value !== '') {
+
+                    result.value = eval(result.value);
+                }
+
+            } else if (clickedButtonValue === 'C') {
+                result.value = '';
+            } else {
+                result.value += clickedButtonValue;
+            }
+
+        }
+    </script>
+</body>
+
+</html>
